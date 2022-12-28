@@ -1,0 +1,76 @@
+body {
+    text-align: center;
+}
+
+#h1 {
+    background-color: rgba(59, 245, 87, 0.6);
+    text-decoration: underline;
+    color: rgb(28, 31, 187);
+    border: dotted 5px rgb(228, 20, 20);
+}
+
+.in {
+    background-color: rgba(145, 196, 216, 0.74);
+    padding: 2em;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+.BTN {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 0.5em;
+    margin-top: 2em;
+}
+
+#num {
+    width: 40%;
+    margin: 2em;
+    height: 3em;
+    border-radius: 3px;
+    text-align: center;
+    font-size: large;
+}
+
+#num:hover {
+    background-color: rgb(167, 177, 164);
+}
+
+.btn {
+    background-color: hsl(0, 71%, 34%);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 1em;
+}
+
+.btn:hover {
+    background-color: rgb(182, 182, 116);
+    cursor: pointer;
+}
+
+#result {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+#reset {
+    padding: 3px 2px;
+    width: 20%;
+    height: 40px;
+    border-radius: 2em;
+    font-weight: bolder;
+    background-color: rgb(43, 216, 135);
+    font-size: 16px
+}
+
+#reset:hover {
+    color: rgb(76, 47, 145);
+}
