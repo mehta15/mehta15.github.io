@@ -198,7 +198,7 @@ nav ul li a:hover {
 
 .homeText ul li {
     margin-top: 2vh;
-    line-height: 48px;
+    line-height: 3em;
 }
 
 
@@ -329,7 +329,7 @@ nav ul li a:hover {
 
 .otherProjectsData {
     position: relative;
-    line-height: 5vh;
+    line-height: 2.1em;
 }
 
 .otherProjectsData button {
@@ -375,7 +375,7 @@ nav ul li a:hover {
 .serviceItems p {
     font-size: 95%;
     margin-top: 24px;
-    line-height: 3vh;
+    line-height: 1.8em;
     font-family: 'Tahoma', 'Segoe UI', 'Josefin sans', 'Raleway', sans-serif;
     max-height: 60%;
     text-align: justify;
