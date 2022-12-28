@@ -20,10 +20,6 @@
     html {
         font-size: 13.75px;
     }
-    .homeContainerDark::before,
-    .homeContainerLight::before {
-        background-image: url('../Images/bg-landscape-2.JPG');
-    }
     .homeText {
         font-size: 20px;
     }
@@ -144,5 +140,19 @@
     }
     footer {
         margin-top: -40px;
+    }
+}
+
+@media screen and (max-width: 1500px) and (min-height: 1000px) {
+    .homeContainerDark::before,
+    .homeContainerLight::before {
+        background-image: url('../Images/bg-landscape-2.JPG');
+    }
+}
+
+@media screen and (max-width: 1500px) and (max-height: 560px) {
+    .homeContainerDark::before,
+    .homeContainerLight::before {
+        background-image: url('../Images/bg-image.jpg');
     }
 }
