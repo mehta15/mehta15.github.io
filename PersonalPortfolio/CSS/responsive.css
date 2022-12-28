@@ -1,0 +1,147 @@
+@media only screen and (max-width:1300px) {
+    html {
+        font-size: 15px;
+    }
+    .homePageContainer {
+        overflow: auto;
+    }
+    .aboutMeContainer {
+        justify-content: space-around;
+        /* margin: 2vh 8vw; */
+    }
+    .aboutMeContainer .aboutMe {
+        flex-basis: 100%;
+    }
+    .serviceItems {
+        font-size: 1.06rem;
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:769px) {
+    html {
+        font-size: 14px;
+    }
+    .homeText {
+        font-size: 20px;
+    }
+    .homeText h1 {
+        font-size: 4rem;
+        margin-top: 100px;
+    }
+    .myPic img {
+        /* min-width: 80vw; */
+        max-height: 500px;
+    }
+    .aboutMeContainer .aboutMe {
+        flex-basis: 100%;
+    }
+    .serviceItems {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .homeContainerDark::before,
+    .homeContainerLight::before {
+        background-image: url('../Images/bg-landscape-2.JPG');
+    }
+    .aboutMeContainer .myPic {
+        margin: 10px 4vw;
+    }
+    .myPic img {
+        max-width: 90vw;
+    }
+    .aboutMeContainer .aboutMe {
+        flex-basis: 100%;
+    }
+    .projectsContainer h2 {
+        width: 95%;
+    }
+    .contactText {
+        flex-basis: 50%;
+        align-items: flex-start;
+        position: relative;
+        top: -40px;
+    }
+    .contactForm {
+        position: relative;
+        top: -40px;
+        flex-basis: 90%;
+    }
+    form .btn {
+        margin: 10px auto;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        /* background-color: black; */
+        width: 200px;
+        height: 100vh;
+        z-index: 2;
+        transition: right 0.5s;
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    nav ul li {
+        display: block;
+        margin: 30px;
+        color: wheat;
+    }
+    nav ul li:not(.radioTheme):hover {
+        background-color: black;
+        cursor: pointer;
+        border-radius: 10px;
+        border: double 4px red;
+        padding: 6px;
+        text-align: center;
+        box-shadow: 0 0 16px 4px white;
+    }
+    nav ul li:first-child {
+        margin-top: 10vh;
+    }
+    nav ul li.radioTheme {
+        position: relative;
+        bottom: -80px;
+    }
+    nav ul li a {
+        color: wheat;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 32px;
+        display: block;
+        left: 25px;
+        font-size: 30px;
+        color: black;
+    }
+    nav .fa-bars {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+    .serviceItemDark,
+    .serviceItemLight {
+        align-items: center;
+        text-align: center;
+    }
+    footer {
+        margin-top: -40px;
+    }
+}

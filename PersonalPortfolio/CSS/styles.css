@@ -1,0 +1,532 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Raleway:wght@500&family=Signika+Negative:wght@500&display=swap&family=Poppins&display=swap?family=Kanit:wght@500&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@500&family=Signika+Negative:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-bg-color: black;
+    --light-font-color: white;
+    --light-bg-color: lavender;
+    --dark-font-color: black;
+    --red-theme-color: rgb(214, 18, 18);
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+
+
+/* ----------------HomeContainer CSS-------------------  */
+
+.homeContainerDark::before,
+.homeContainerLight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: url('../Images/bg-image.jpg');
+    /* background-position: 45vw 20vh; */
+    /* background-position: top; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.8;
+}
+
+.darkTheme {
+    background-color: var(--dark-bg-color);
+    color: var(--light-font-color);
+}
+
+.homeContainerDark {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 6vw;
+    font-size: 1.15rem;
+}
+
+.logo {
+    position: relative;
+    padding: 8px;
+    max-height: 135px;
+    box-sizing: content-box;
+}
+
+li .rdLight,
+li .rdDark {
+    margin: 1em 0.4em;
+    color: white;
+}
+
+.rdDark:hover,
+.rdLight:hover {
+    cursor: pointer;
+}
+
+li.radioTheme label:hover {
+    cursor: pointer;
+}
+
+.logo:before,
+.logo:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.logo:before {
+    top: 0;
+    left: 0;
+    right: 60%;
+    bottom: 70%;
+    border-top: 4px solid var(--red-theme-color);
+    border-left: 4px solid var(--red-theme-color);
+}
+
+.logo:after {
+    top: 70%;
+    left: 60%;
+    right: 0;
+    bottom: 0;
+    border-bottom: 4px solid var(--red-theme-color);
+    border-right: 4px solid var(--red-theme-color);
+}
+
+.logo img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+nav ul {
+    /* margin-left: 25vw; */
+    text-align: right;
+    box-sizing: border-box;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 3.5vh 1vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(235, 238, 61);
+    font-weight: 600;
+    position: relative;
+    transition: 0.5s;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: var(--red-theme-color);
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    transition: width 0.4s linear;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    font-size: 1.3em;
+}
+
+.homeText {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    /* width: 80vw; */
+    margin: 12px 6vw 0vh;
+    letter-spacing: 2px;
+    padding: 10px;
+    max-height: 100vh;
+    font-size: 1rem;
+    overflow: auto;
+}
+
+.homeText h1 {
+    font-size: 3rem;
+    font-family: 'Kanit', sans-serif;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-fill-color: rgba(12, 12, 103, 1);
+    max-width: 50%;
+    animation: transparent 2s ease-in infinite;
+}
+
+@keyframes transparent {
+    0% {
+        -webkit-text-fill-color: rgba(12, 12, 103, 1);
+        /* -webkit-text-fill-color: #fff500; */
+        -webkit-text-stroke-color: transparent;
+    }
+    /* 33% {
+        -webkit-text-stroke-color: rgba(12, 12, 103, 0.5);
+        -webkit-text-fill-color: rgba(12, 12, 103, 0.75);
+    }
+    66% {
+        -webkit-text-stroke-color: rgba(12, 12, 103, 0.75);
+        -webkit-text-fill-color: rgba(12, 12, 103, 0.50)
+    } */
+    100% {
+        -webkit-text-fill-color: transparent;
+        /* -webkit-text-fill-color: #fff500; */
+        -webkit-text-stroke-color: rgba(12, 12, 103, 1);
+    }
+}
+
+.homeText span {
+    -webkit-text-fill-color: var(--red-theme-color);
+    font-size: 1.8em;
+}
+
+.homeText ul {
+    margin: 4vh 0em;
+}
+
+.homeText ul li {
+    margin-top: 2vh;
+    line-height: 48px;
+}
+
+
+/* ----------------aboutMeContainer CSS-------------------  */
+
+.aboutMeContainer {
+    /* width: 100vw; */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3vh 4vw;
+    flex-wrap: wrap;
+}
+
+.aboutMeContainer .myPic {
+    margin: 4vh 2vw;
+}
+
+.myPic img {
+    /* max-height: 72vh; */
+    max-width: 447px;
+    border-radius: 10px;
+    box-shadow: -7px -7px 20px rgb(237, 7, 7, 0.7);
+}
+
+.aboutMeContainer .aboutMe {
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    background: linear-gradient(-38deg, rgb(0 0 0), transparent) rgba(237, 7, 7, 0.7);
+    flex-basis: 60%;
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.aboutMe h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 3vh 4vw;
+}
+
+.aboutMe span {
+    color: #fff500;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+.aboutMe div {
+    box-sizing: border-box;
+    padding: 3vh 4vw;
+    line-height: 2.1em;
+    font-size: 0.8em;
+}
+
+
+/* ----------------projectsContainer CSS-------------------  */
+
+.projectsContainer {
+    background: linear-gradient(2deg, #504ea1, transparent);
+    margin: 5vh 3vw;
+    border: double 6px rgb(231, 206, 42);
+    ;
+    border-radius: 30px;
+    padding: 4vh 3vw;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.18em;
+}
+
+.projectsContainer h1 {
+    text-align: left;
+    margin-bottom: 4vh;
+    font-weight: bolder;
+    font-size: 2.2em;
+    color: rgb(231, 206, 42);
+    text-shadow: -4px -4px 12px #f91c1c;
+}
+
+.projectsContainer h2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 330px;
+    font-size: 1.2em;
+}
+
+.projectsContainer h2 span {
+    margin: 2vh 1.5vw;
+}
+
+.activeTab {
+    position: relative;
+    opacity: 1;
+    transition: 0.5s ease-in;
+}
+
+.activeTab::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0%;
+    width: 75%;
+    height: 5px;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.inactiveTab {
+    position: relative;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.inactiveTab:hover {
+    opacity: 0.5;
+}
+
+.activeTabData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2vh 25px;
+}
+
+.inactiveTabData {
+    display: none;
+}
+
+.otherProjectsData {
+    position: relative;
+    line-height: 5vh;
+}
+
+.otherProjectsData button {
+    position: absolute;
+    margin: 0px 2px;
+    width: 150px;
+    height: 5vh;
+    bottom: 15px;
+}
+
+
+/* ----------------servicesContainer CSS-------------------  */
+
+.servicesContainer {
+    font-family: Poppins, 'Josefin Sans', sans-serif;
+    margin: 2vh 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(115deg, rgb(0 0 0 / 90%), #549eae, #422828);
+    border-radius: 20px;
+}
+
+.servicesContainer>h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 3rem;
+    margin-left: 30px;
+    text-transform: uppercase;
+    margin: 3vh 3vw;
+    padding: 14px;
+    border-radius: 15px;
+}
+
+.serviceItems {
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 93vw;
+}
+
+.serviceItems p {
+    font-size: 95%;
+    margin-top: 24px;
+    font-family: cursive;
+    max-height: 60%;
+    text-align: justify;
+    word-break: keep-all;
+}
+
+.serviceItemDark {
+    width: 320px;
+    height: 400px;
+    padding: 16px 18px;
+    border-radius: 15px;
+    background-color: #28225a;
+    margin: 3vh 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;
+    overflow: auto;
+}
+
+.serviceNameDark {
+    color: rgb(222, 170, 39);
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.serviceItemDark img {
+    border-radius: 12px;
+}
+
+
+/* ----------------contactMeContainer CSS-------------------  */
+
+.contactMeContainer {
+    font-family: 'Poppins';
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 6vh 3vw 0vh;
+    padding: 4vh 2vw;
+}
+
+.contactText {
+    flex-basis: 30%;
+}
+
+.contactText h3 {
+    margin: 18px 2.5vw 0px 0vw;
+    font-size: 3.6rem;
+}
+
+.contactText h3 span {
+    color: #f91c1c;
+}
+
+.socialMedia {
+    display: flex;
+    min-width: 250px;
+    max-width: 60%;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.socialMedia a {
+    color: white;
+}
+
+.contactForm {
+    margin-top: 20px;
+    flex-basis: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    font-size: 0.85em;
+    padding: 2vh 2vw;
+    margin: 5px;
+    border-radius: 5px;
+    border: transparent;
+    outline: none;
+    transition: 0.5s;
+}
+
+form textarea {
+    height: 220px;
+}
+
+input:focus,
+textarea:focus {
+    opacity: 0.8;
+    font-size: 1.2em;
+}
+
+form .btn {
+    max-width: 300px;
+    font-weight: bolder;
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: #f91c1c;
+    color: white;
+    text-align: center;
+    margin: 2vh 0vw 0vh;
+    min-height: 50px;
+    border-radius: 12px;
+}
+
+form .btn:hover {
+    cursor: pointer;
+    border: solid 2px red;
+    background-color: transparent;
+    color: red;
+}
+
+sup {
+    color: #fff500;
+}
+
+footer {
+    font-family: 'Josefin Sans';
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 0 auto 40px;
+}
