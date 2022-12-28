@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cipher</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+
+    <h1>Welcome to my Cipher!!</h1>
+    <hr>
+
+
+
+    <div class="text">
+
+        <fieldset class="fld1">
+            <legend>Encryption</legend>
+            <div class="abc">
+                <br> <label>Enter the text to be encrypted.</label><br>
+                <input type="text" class="txtAr" name="encTxtAr" id="encTxtAr" placeholder="Enter your text here...."><br>
+                <!-- <br><b>Enter the Key.</b><br><br>
+                <input type="number" placeholder="Type a number" name="keyEnc" id="keyEnc"> -->
+                <!-- <select id="rotEnc">
+                    <option value="1">ROT1</option>
+                    <option value="2">ROT2</option>
+                    <option value="3">ROT3</option>
+                    <option value="4">ROT4</option>
+                    <option value="5">ROT5</option>
+                    <option value="6">ROT6</option>
+                    <option value="7">ROT7</option>
+                    <option value="8">ROT8</option>
+                    <option value="9">ROT9</option>
+                    <option value="10">ROT10</option>
+                    <option value="11">ROT11</option>
+                    <option value="12">ROT12</option>
+                    <option value="13" selected>ROT13</option>
+                    <option value="14">ROT14</option>
+                    <option value="15">ROT15</option>
+                    <option value="16">ROT16</option>
+                    <option value="17">ROT17</option>
+                    <option value="18">ROT18</option>
+                    <option value="19">ROT19</option>
+                    <option value="20">ROT20</option>
+                    <option value="21">ROT21</option>
+                    <option value="22">ROT22</option>
+                    <option value="23">ROT23</option>
+                    <option value="24">ROT24</option>
+                    <option value="25">ROT25</option>
+                </select> -->
+            </div>
+            <button class="btn" id="btnEnc">Encrypt</button><br>
+            <hr><br>
+            <div class="span">
+                <span id="encPlainText"><b>Entered Plain Text: </b></span><br>
+                <span id="encCipherText"><b>Encrypted Cipher Text: </b></span><br>
+            </div><br>
+            <hr>
+        </fieldset>
+
+        <br>
+
+        <fieldset class="fld2">
+            <legend>Decryption</legend>
+            <br> <label>Enter the text to be decrypted.</label><br>
+            <input type="text" class="txtAr" name="decTxtAr" id="decTxtAr" placeholder="Enter your text here...."><br>
+            <!-- <br><b>Enter the Key.</b><br><br>
+            <input type="number" placeholder="Type a number" name="keyDec" id="keyDec"> -->
+            <button class="btn" id="btnDec">Decrypt</button><br>
+            <hr><br>
+            <div class="span">
+                <span id="decPlainText"><b>Entered Plain Text: </b></span><br>
+                <span id="decCipherText"><b>Decrypted Cipher Text: </b></span><br>
+            </div><br>
+            <hr>
+
+        </fieldset>
+
+    </div>
+    <br>
+    <hr>
+
+
+
+
+
+
+
+
+</body>
+
+<script>
+    var userTxtEnc = document.getElementById("encTxtAr");
+    var userTxtDec = document.getElementById("decTxtAr");
+    var btnEnc = document.getElementById("btnEnc");
+    var btnDec = document.getElementById("btnDec");
+    var encPlainText = document.getElementById("encPlainText");
+    var encCipherText = document.getElementById("encCipherText");
+    var decPlainText = document.getElementById("decPlainText");
+    var decCipherText = document.getElementById("decCipherText");
+
+
+    function onlyLetters(str) {
+
+        return /^[a-zA-Z ]+$/.test(str);
+    }
+
+
+
+    function atBashEncrypt(message) {
+        var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+        var tebahpla = "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA ";
+        var decoded_string = "";
+
+        for (i = 0; i < message.length; i++) {
+            var coded_letter = message.charAt(i);
+            var letter_index = alphabet.indexOf(coded_letter);
+            var decoded_letter = tebahpla.charAt(letter_index);
+            decoded_string = decoded_string + decoded_letter;
+        }
+        return decoded_string;
+
+    }
+
+
+
+
+
+
+
+    btnEnc.onclick = function() {
+        if (userTxtEnc.value.length < 1) {
+            encPlainText.innerHTML = "<b>Entered Plain Text</b>: <br><br><b>Error! No Input entered </b>" + userTxtEnc.value;
+            encPlainText.style.color = "red";
+            encCipherText.innerHTML = "<b>Encrypted Cipher Text: </b>"
+            encCipherText.style.color = "black";
+
+
+        } else if (!onlyLetters(userTxtEnc.value)) {
+            alert('Please enter only alphabets');
+            encPlainText.innerHTML = "<b>Entered Plain Text: </b>";
+            encCipherText.innerHTML = "<b>Encrypted Cipher Text: </b>";
+            encPlainText.style.color = "black";
+            encCipherText.style.color = "black";
+        } else {
+
+            encPlainText.innerHTML = "<b>Entered Plain Text: <br><br> " + userTxtEnc.value + "</b>";
+            encPlainText.style.color = "darkblue";
+            encCipherText.innerHTML = "<b>Encrypted Cipher Text: <br> <br>" + atBashEncrypt(userTxtEnc.value); + "</b>"
+            encCipherText.style.color = "darkblue";
+        }
+    }
+
+
+    btnDec.onclick = function() {
+        if (userTxtDec.value.length < 1) {
+
+            decPlainText.innerHTML = "<b>Entered Plain Text</b>: <br><br><b>Error! No Input entered </b>" + userTxtDec.value;
+            decPlainText.style.color = "red";
+            decCipherText.innerHTML = "<b>Decrypted Cipher Text: </b>"
+            decCipherText.style.color = "black";
+        } else if (!onlyLetters(userTxtDec.value)) {
+            alert('Please enter only alphabets');
+            decPlainText.innerHTML = "<b>Entered Plain Text: </b>";
+            decCipherText.innerHTML = "<b>Decrypted Cipher Text: </b>";
+            decPlainText.style.color = "black";
+            decCipherText.style.color = "black";
+        } else {
+            decPlainText.innerHTML = "<b>Entered Plain Text: <br><br> " + userTxtDec.value + "</b>";
+            decPlainText.style.color = "darkblue";
+            decCipherText.innerHTML = "<b>Encrypted Cipher Text: <br> <br>" + atBashEncrypt(userTxtDec.value); + "</b>"
+            decCipherText.style.color = "darkblue";
+
+
+        }
+
+    }
+</script>
+
+</html>
