@@ -1,0 +1,61 @@
+.flex-center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    color: #000000;
+    background-color: #280000;
+}
+
+label {
+    font-weight: bold;
+}
+
+span {
+    font-style: italic;
+    color: rgb(222, 172, 21);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: large;
+    padding: 2vh 8vw;
+    text-align: center;
+}
+
+.btn-back {
+    position: relative;
+    top: 3px;
+    height: 7.5vh;
+    left: 10px;
+    border: solid 4px black;
+    border-radius: 15px;
+}
+
+.btn-back img {
+    height: 6vh;
+}
+
+.btn-back:hover {
+    background-color: rgb(219, 201, 201);
+    cursor: pointer;
+}
+
+.btnToggle {
+    width: 80vw;
+    margin: 2vh 10vw;
+    box-sizing: border-box;
+    padding: 4px;
+    background-color: black;
+    color: lavender;
+    border-radius: 6px;
+    height: 4vh;
+}
+
+.btnToggle:hover {
+    cursor: pointer;
+    background-color: rgb(222, 172, 21);
+    color: black;
+}

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+    --main-bg-color: rgb(171 22 22);
+}
+
+.hdr {
+    position: sticky;
+    top: 0px;
+    color: white;
+    min-height: 12vh;
+    background-color: var(--main-bg-color);
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: lavender;
+    min-height: calc(78vh - 5px);
+    box-sizing: border-box;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    min-height: 65vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.categories label {
+    text-align: center;
+}
+
+.ftr {
+    position: sticky;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 10vh;
+    background-color: var(--main-bg-color);
+    bottom: 0px;
+}
+
+.mainBooks {
+    background-color: lavender;
+    min-height: calc(78vh - 5px);
+    box-sizing: border-box;
+}
+
+.booksContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    min-height: 72vh;
+}
+
+.bookTitle {
+    text-align: center;
+    font-weight: bold;
+    color: brown;
+    border: solid 2px black;
+    padding: 2px
+}
+
+.bookHeading {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bookHeading {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.bookHeading p {
+    display: inline;
+}
+
+.bookInfo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bookInfo p {
+    display: inline;
+}
