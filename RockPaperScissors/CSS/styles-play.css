@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(163, 255, 209);
+}
+
+.play {
+    background-color: rgb(222, 181, 226);
+    border: solid black 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 115px;
+    margin: 1em 1em 0em;
+    padding: 1em;
+}
+
+.btn {
+    margin: 4em 44%;
+    padding: 3px 2px;
+    width: 12%;
+    height: 54px;
+    border-radius: 2em;
+    font-weight: bolder;
+}
+
+.btn:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.span2 {
+    font-size: larger;
+    font-weight: bold;
+    margin: 0% 45%;
+}
