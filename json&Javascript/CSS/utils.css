@@ -1,0 +1,88 @@
+.flex-center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.btn {
+    background-color: #2b2c19c2;
+    color: lavenderblush;
+    font-variant: petite-caps;
+    font-size: large;
+    width: 40vw;
+    height: 20vh;
+    padding: 0px 1em;
+    border-radius: 0.8em;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: beige;
+    color: blueviolet;
+}
+
+.btn-back {
+    background-color: #2b2c19c2;
+    color: lavenderblush;
+    font-variant: petite-caps;
+    font-size: large;
+    width: 20vw;
+    height: 10vh;
+    padding: 0px 1em;
+    border-radius: 0.8em;
+}
+
+.btn-back:hover {
+    cursor: pointer;
+    background-color: beige;
+    color: blueviolet;
+}
+
+a {
+    color: red;
+}
+
+.toggleFormatting {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.toggleBorder {
+    border: solid 5px brown;
+    width: 25vw;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.changeColour {
+    background-color: beige;
+    width: 25vw;
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .btn {
+        background-color: #2b2c19c2;
+        color: lavenderblush;
+        font-variant: petite-caps;
+        font-size: medium;
+        width: 45vw;
+        height: 30vh;
+        padding: 1em 2em;
+        border-radius: 0.8em;
+    }
+    .btn-back {
+        height: 20vh;
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .btn {
+        height: 40vh;
+        border-radius: 4em;
+        padding: 1em;
+    }
+}

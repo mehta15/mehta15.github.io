@@ -1,0 +1,18 @@
+{
+    "MyData": {
+        "studentName": "Karan Mehta",
+        "studentID": 991638499,
+        "studentLogin": "mehta15",
+        "studentProgram": "CST - Software Engineering",
+        "studentHome": "India",
+        "studentImg": "myPic.jpg"
+    },
+    "zooAnimals": [
+        { "aID": 11, "aName": "Tiger", "aClass": "Mammal", "aImg": "tiger02.jpg" },
+        { "aID": 22, "aName": "Elephant", "aClass": "Mammal", "aImg": "elephant.jpg" },
+        { "aID": 33, "aName": "Parrot", "aClass": "Bird", "aImg": "parrot.jpg" },
+        { "aID": 44, "aName": "Peacock", "aClass": "Bird", "aImg": "peacock.jpg" },
+        { "aID": 55, "aName": "Cobra", "aClass": "Reptile", "aImg": "cobra.jpg" },
+        { "aID": 66, "aName": "Python", "aClass": "Reptile", "aImg": "python.jpg" }
+    ]
+}
