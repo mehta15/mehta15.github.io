@@ -137,9 +137,17 @@
     .serviceItemLight {
         align-items: center;
         text-align: center;
+        height: auto;
+    }
+    .serviceItems p {
+        line-height: 2.1em;
+    }
+    .contactText {
+        text-align: center;
     }
     footer {
-        margin-top: -40px;
+        margin: -40px auto 30px;
+        width: 80%;
     }
 }
 
