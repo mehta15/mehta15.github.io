@@ -441,7 +441,7 @@ nav ul li a:hover {
 .socialMedia {
     display: flex;
     min-width: 250px;
-    max-width: 100%;
+    max-width: 60%;
     align-items: flex-end;
     justify-content: space-around;
 }
