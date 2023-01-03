@@ -42,6 +42,13 @@
     .homeContainerDark::before,
     .homeContainerLight::before {
         background-image: url('../Images/bg-landscape-2.JPG');
+        background-attachment: scroll;
+    }
+    .homeText {
+        font-size: 0.9rem;
+    }
+    .homeText h1 {
+        font-size: 2.9rem;
     }
     .aboutMeContainer .myPic {
         margin: 10px 4vw;
