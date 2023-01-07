@@ -218,7 +218,7 @@ nav ul li a:hover {
 }
 
 .myPic img {
-    max-width: 470px;
+    max-width: 450px;
     border-radius: 10px;
     box-shadow: -7px -7px 20px rgb(237, 7, 7, 0.7);
 }
@@ -228,12 +228,11 @@ nav ul li a:hover {
     border-radius: 10px;
     background: linear-gradient(-38deg, rgb(0 0 0), transparent) rgba(237, 7, 7, 0.7);
     flex-basis: 60%;
-    font-size: 1.3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-size: 1.20em;
+    font-size: 1.15em;
 }
 
 .aboutMe h1 {
@@ -252,6 +251,8 @@ nav ul li a:hover {
     padding: 3vh 4vw;
     line-height: 2.1em;
     font-size: 0.8em;
+    text-align: justify;
+    word-break: keep-all;
 }
 
 

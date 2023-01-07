@@ -12,7 +12,6 @@ let navBar = document.querySelector("nav ul");
 
 
 
-
 rdDark.addEventListener("click", () => {
 
     body.classList.add('darkTheme');
