@@ -91,6 +91,7 @@
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
+        overflow: auto;
     }
     @keyframes gradient {
         0% {
@@ -118,11 +119,17 @@
         box-shadow: 0 0 16px 4px white;
     }
     nav ul li:first-child {
-        margin-top: 10vh;
+        margin-top: 100px;
     }
-    nav ul li.radioTheme {
-        position: relative;
-        bottom: -80px;
+    .radioLight {
+        position: absolute;
+        bottom: calc(2vh + 55px);
+        right: -10px;
+    }
+    .radioDark {
+        position: absolute;
+        bottom: 2vh;
+        right: -10px;
     }
     nav ul li a {
         color: wheat;
